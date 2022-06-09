@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        #demo {
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size:large;
+        }
+    </style>
+    <script type="text/javascript">
+        function test(mesaj) {
+            console.log(mesaj);
+            document.getElementById('demo').innerHTML = mesaj;
+        }
+        function Topla() {
+            let sayi1 = document.getElementById('sayi1');
+            let sayi2 = document.getElementById('sayi2');
+            console.log(sayi1);
+            console.log(sayi2);
+
+            document.getElementById('demo').innerHTML = parseInt(sayi1.value,10) + parseInt(sayi2.value,10);
+
+        }
+        function input1() {
+            document.getElementById('sayi1').innerHTML = '';
+        }
+
+    </script>
+</head>
+<body>
+    <h1>1. Html Dosyam</h1>
+    <input type="text" name="sayi1" id="sayi1" value="Bir sayi giriniz" onclick="input1()" />
+    <input type="text" name="sayi2" id="sayi2" value="Bir sayi giriniz" />
+
+    <div id="demo">
+
+    </div>
+
+    <button onclick="Topla()('Deneme')">Deneme</button>
+</body>
+</html>
